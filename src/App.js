@@ -10,6 +10,8 @@ import loadingImage from './assets/icons/loading.svg'
 
 function App() {
 
+  let timer;
+
   const [searchValue, setSearchValue] = useState('');
   const [userData, setUserData] = useState(null);
   const [isLoading, setIsLoading] = useState(undefined);
@@ -29,13 +31,16 @@ function App() {
   }, [searchValue]);
 
   const onChangeHandler = (inputValue) => {
-    setTimeout( ()=>{
+    clearTimeout(timer);
+    timer = setTimeout( ()=>{
       setSearchValue(inputValue);
     }, 800)
   };
 
   return (
       <div className="App">
+
+        <h1>Github Typeahead</h1>
 
         <Search onChangeHandler={onChangeHandler}/>
         { searchValue && userData !== null && <Users data={userData}/>}

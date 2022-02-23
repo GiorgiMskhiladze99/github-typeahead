@@ -43,3 +43,9 @@
     }
   }
 }
+
+@media (max-width: 576px){
+  .search__suggestions {
+    width: 90%;
+  }
+}
