@@ -11,10 +11,15 @@
     width: 100%;
     height: 50%;
     padding: 0 12px;
-    border: 1px solid #333;
+    border: 1px solid #444;
     border-radius: 20px;
     font-size: 1rem;
     letter-spacing: .5px;
+  }
+
+  .search__input:focus {
+    border: solid #444;
+    box-shadow: 0 0 5px 0 rgba(46,46,46,0.48);
   }
 
   .search__button{
