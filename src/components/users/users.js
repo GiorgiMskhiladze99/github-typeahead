@@ -11,7 +11,7 @@ function Users(props) {
                         props.data.items && props.data.items.map((el) => {
                             return (
                                 <li key={el.id} onClick={e=>{window.open(el.html_url)}}>
-                                    <img width={50} height={50} className={"user__image"} src={el.avatar_url} alt="user"/>
+                                    <img className={"user__image"} src={el.avatar_url} alt="user"/>
                                     <span className={"user__name"}>{el.login}</span>
                                 </li>
                             )

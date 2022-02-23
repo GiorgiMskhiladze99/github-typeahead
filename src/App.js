@@ -29,7 +29,9 @@ function App() {
   }, [searchValue]);
 
   const onChangeHandler = (inputValue) => {
-    setSearchValue(inputValue);
+    setTimeout( ()=>{
+      setSearchValue(inputValue);
+    }, 800)
   };
 
   return (
