@@ -1,39 +1,34 @@
+@import '/src/assets/mixins/mixins';
+
 .search__suggestions{
-  width: 50%;
+  @include w-h(50%, auto);
 
   ul{
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    @include w-h(100%, auto);
+    @include marg(0, 0, 0, 0);
+    @include pad(0, 0, 0, 0);
+    @include flex(flex, column, flex-start, none);
     list-style: none;
 
     li {
+      @include marg(5px, 0, 5px, 0);
+      @include flex(flex, row, flex-start, center);
       cursor: pointer;
-      margin: 5px 0;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
       border-radius: 5px 30px 30px 5px;
-      background-color: rgba(105, 105, 105, 0.5);
-      box-shadow: 0 0 5px 0 rgba(46,46,46,0.48);
+      background-color: $suggest_list_bg;
+      box-shadow: 0 0 5px 0 $suggest_list_shadow_color;
 
       .user__image{
-        width: 50px;
-        height: 50px;
+        @include w-h(50px, 50px);
         border-radius: 5px;
       }
 
       span {
+        @include w-h(100%, auto);
+        @include marg(0, 10px, 0, 10px);
+        @include flex(flex, none, flex-start, none);
         cursor: pointer;
-        margin: 0 10px;
-        width: 100%;
-        display: flex;
-        justify-content: flex-start;
-        color: #fff;
+        color: $suggest_text_color;
       }
     }
 
@@ -46,6 +41,6 @@
 
 @media (max-width: 576px){
   .search__suggestions {
-    width: 90%;
+    @include w-h(90%, auto);
   }
 }

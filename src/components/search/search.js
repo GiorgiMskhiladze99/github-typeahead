@@ -20,7 +20,7 @@ function Search({onChangeHandler}) {
 
     return (
         <div className="input">
-            <input type="text" className={"search__input"} maxLength={20} onChange={ e => changeHandler(e.target.value)} />
+            <input type="text" className={"search__input"} maxLength={20} placeholder={"Search Github User"} onChange={ e => changeHandler(e.target.value)} />
             {/*<input type="text" className={"search__input"} maxLength={20} onChange={ e => changeHandler(e.target.value)} onKeyPress={keyPressHandler}/>*/}
             {/*<button className={"search__button"} onClick={clickHandler}>Search</button>*/}
         </div>

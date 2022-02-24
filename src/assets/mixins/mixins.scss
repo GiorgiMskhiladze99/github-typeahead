@@ -1,0 +1,28 @@
+$search_input_border_color: #444;
+$suggest_input_border: #444;
+$suggest_input_shadow_color: rgba(46,46,46,0.48);
+
+$suggest_text_color: #fff;
+$suggest_list_bg: rgba(105, 105, 105, 0.5);
+$suggest_list_shadow_color: rgba(46,46,46,0.48);
+
+@mixin flex($flex, $direction, $justify, $align) {
+  display: $flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin marg($top, $right, $bottom, $left) {
+  /* top | right | bottom | left */
+  margin: $top $right $bottom $left;
+}
+
+@mixin pad($top, $right, $bottom, $left) {
+  padding: $top $right $bottom $left;
+}
+
+@mixin w-h($w, $h) {
+  width: $w;
+  height: $h;
+}
