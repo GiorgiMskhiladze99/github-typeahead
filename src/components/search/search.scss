@@ -37,6 +37,6 @@
 
 @media (max-width: 576px){
   .input {
-    @include w-h(90%, auto);
+    @include w-h(90%, 7vh);
   }
 }
