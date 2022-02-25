@@ -43,7 +43,8 @@ function App() {
         <h1>Github Typeahead</h1>
 
         <Search onChangeHandler={onChangeHandler}/>
-        { searchValue && userData !== null && <Users data={userData}/>}
+        { searchValue && userData !== null && userData.total_count !== 0 ? <Users data={userData}/> :
+            searchValue && userData !== null && userData.total_count === 0 ? <span>User not found</span> : ""}
 
         {/*it can be another component or maybe ported above the root element*/}
         { isLoading && userData === null ? <div className={"loading__container"}>
